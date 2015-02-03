@@ -1,0 +1,12 @@
+<h1>Top 10 pages</h1>
+<ul>
+	<% @links.each do |link| %>
+		<li> <a href="<%= link.url_short %>"><%= link.url %></a> - Visites: 
+			<% if link.visites.nil? %>
+				0
+			<% else %>
+				<%= link.visites %> 
+			<% end %>
+		</li>
+	<% end %>
+</ul>
